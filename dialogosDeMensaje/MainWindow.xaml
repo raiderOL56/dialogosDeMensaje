@@ -8,5 +8,13 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBox Name="txt" Height="30" Width="100" Grid.Row="0"></TextBox>
+        <Button Click="Button_Click" Height="50" Width="50" Grid.Row="1">MyBotton</Button>
     </Grid>
 </Window>

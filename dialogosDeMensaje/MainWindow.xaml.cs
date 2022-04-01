@@ -24,5 +24,24 @@ namespace dialogosDeMensaje
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string cliente = txt.Text;
+
+            MessageBoxResult result = MessageBox.Show($"Bloqueará/Desbloqueará al cliente {cliente}, ¿Está de acuerdo?", "Advertencia", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Aceptaste", "My App");
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("Denegaste", "My App");
+                    break;
+                case MessageBoxResult.Cancel:
+                    txt.Text = "";
+                    break;
+            }
+        }
     }
 }
