@@ -29,16 +29,13 @@ namespace dialogosDeMensaje
         {
             string cliente = txt.Text;
 
-            MessageBoxResult result = MessageBox.Show($"Bloqueará/Desbloqueará al cliente {cliente}, ¿Está de acuerdo?", "Advertencia", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show($"Bloqueará/Desbloqueará al cliente {cliente}, ¿Está de acuerdo?", "Advertencia", MessageBoxButton.YesNo);
             switch (result)
             {
                 case MessageBoxResult.Yes:
                     MessageBox.Show("Aceptaste", "My App");
                     break;
                 case MessageBoxResult.No:
-                    MessageBox.Show("Denegaste", "My App");
-                    break;
-                case MessageBoxResult.Cancel:
                     txt.Text = "";
                     break;
             }
